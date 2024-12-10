@@ -525,7 +525,7 @@ st.markdown("---")
 ###############Analise Bivariada##########################
 
 st.markdown("""
-### Análises Bivariada 🌐
+### Análise Bivariada 🌐
 
 Nesta seção, você poderá visualizar 
 gráficos que propomos para analisar a 
