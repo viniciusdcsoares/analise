@@ -30,10 +30,10 @@ def grafico_barras_ordenado(df, coluna, xlabel, layout, titulo="", rotation=0, h
         template=template_plotly,
         xaxis_title=coluna,
         yaxis_title='Frequência',
-        xaxis=dict(titlefont=dict(color=template_graph_texto),
+        xaxis=dict(#titlefont=dict(color=template_graph_texto),
                    tickfont=dict(color=template_graph_texto)),  # Enforce custom order
         yaxis=dict(range=[0, novo['Contagem'].max() * 1.1],
-                   titlefont=dict(color=template_graph_texto),
+                   #titlefont=dict(color=template_graph_texto),
                    tickfont=dict(color=template_graph_texto)), # extendendo um pouco o limite de y
         paper_bgcolor=template_graph,  
         plot_bgcolor=template_graph)
@@ -184,4 +184,5 @@ class TratamentoDados:
 
 
         return df_migracao, salarios
+
 
