@@ -150,11 +150,11 @@ if variavel_distribuicao == "Idade":
         plot_bgcolor=template_graph,
         font=dict(color=template_graph_texto),  # Ensure all text is visible
         xaxis=dict(
-            titlefont=dict(color=template_graph_texto),
+            #titlefont=dict(color=template_graph_texto),
             tickfont=dict(color=template_graph_texto)
             ),
         yaxis=dict(
-            titlefont=dict(color=template_graph_texto),
+            #titlefont=dict(color=template_graph_texto),
             tickfont=dict(color=template_graph_texto)
             )
         )
@@ -190,10 +190,10 @@ else:
         xaxis_title=variavel_distribuicao,
         yaxis_title='Frequência',
         xaxis=dict(categoryorder='array', categoryarray=ordem_faixas_resumida,
-                   titlefont=dict(color=template_graph_texto),
+                   #titlefont=dict(color=template_graph_texto),
                    tickfont=dict(color=template_graph_texto)),  # Enforce custom order
         yaxis=dict(range=[0, novo['Contagem'].max() * 1.1],
-                   titlefont=dict(color=template_graph_texto),
+                   #titlefont=dict(color=template_graph_texto),
                    tickfont=dict(color=template_graph_texto)), # extendendo um pouco o limite de y
         paper_bgcolor=template_graph,  
         plot_bgcolor=template_graph)
