@@ -8,7 +8,27 @@ st.markdown("""
         <h1> 👩‍💻 O Perfil do Profissional de Dados no Brasil 🎲 </h1>
 """, unsafe_allow_html=True)
 
+import requests
+import json
 
+API_KEY = st.secrets['apikey']
+QUERY = "Guerra no Irã"
+URL = f"https://newsapi.org/v2/everything?q={QUERY}&language=pt&apiKey={API_KEY}"
+
+response = requests.get(URL)
+data = response.json()
+
+# Filtra apenas os títulos e links
+noticias = [{"titulo": artigo["title"], 'autor': artigo['author'], "descricao": artigo["description"], "link": artigo["url"]} for artigo in data["articles"]]
+
+# Salva os resultados
+with open("clipping.json", "w", encoding="utf-8") as f:
+    json.dump(noticias, f, ensure_ascii=False, indent=4)
+
+st.write(f"🔍 {len(noticias)} notícias salvas!")
+st.write(response)
+st.write(data)
+st.write(noticias)
 ###############Opções de Preferencia##########
 
 # %% opções de preferencia 
