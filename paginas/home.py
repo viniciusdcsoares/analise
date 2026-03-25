@@ -5,7 +5,7 @@ import streamlit as st
 
 st.markdown("""
     <div style="text-align: center;">
-        <h1> 👩‍💻 O Perfil do Profissional de Dados no Brasil 🎲 </h1>
+        <h1> 👩‍💻 OO Perfil do Profissional de Dados no Brasil 🎲 </h1>
 """, unsafe_allow_html=True)
 
 import requests
